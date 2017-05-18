@@ -1,12 +1,8 @@
 
 
-  
 
 
 
-
-
-  
 
 
 <!doctype html>
@@ -20,9 +16,14 @@
   
   
   
-    <meta name="description" content="Learn more,happy more!">
+    <meta name="description" content="什么是vue-router？路由，其实就是指向、映射的意思。
+基本概念　路由中有三个基本的概念 route, routes, router。
+
+route 是一条路由Home按钮  =&gt; home内容
+routes 是一组路由，把上面的每一条路由组合起来，形成一个数组。
+router 是一个机制，相当于管理者，它来管理路由。当用户点击Home 按钮的时候，这时router 就起作用了，...">
   
-  <title>归档: 2017 [ MJY-Blog ]</title>
+  <title>Vue-router的安装与使用 [ MJY-Blog ]</title>
   
   
     <link rel="shortcut icon" href="/images/avatar.ico">
@@ -41,6 +42,15 @@
 <body>
 <div class="side-navigate hide-area">
   
+  
+    <div class="item next">
+      <a href="/2017/05/17/hello-world/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        Hello World
+      </div>
+    </div>
   
 </div>
 <div id="outer-container" class="hide-area">
@@ -105,106 +115,78 @@
     <div id="content-inner">
       
       
-  <article>
-    
-
-  <div id="recent-posts">
-    <h1>归档
-    
-      <span class="posts-count">
-      共
-      2
+  <article id="post">
+    <h1>Vue-router的安装与使用</h1>
+    <p class="page-title-sub">
+      <span id = "post-title-date">撰写于 2017-05-18</span>
       
-        文章
+        <span id = "post-title-updated">修改于 2017-05-18</span>
+      
+      
+      
+      <span id = "post-title-tags">
+      标签
+      
+      
+        
+        
+        <a href="/tags/Vue2-0/">Vue2.0</a>
       
       </span>
-    
-    </h1>
-    
-    
       
-      
-        
-      
-      
+    </p>
     
-      
-      
-      
-    
-    
-    
-      
-      
-        
-        <h3 class="archive-year-title">2017
-        
-          <span class="posts-count">
-          共
-          2
-          
-            文章
-          
-          </span>
-        
-        </h3>
-      
-      <div class="post-title-item">
-  
-  <a href="/2017/05/18/vue-router/">
-  
-    Vue-router的安装与使用
-  
-  </a>
-  <p class="page-title-sub">
-    <span id = "post-title-date">5-18</span>
-    
-    
-    <span id = "post-title-tags">
-    标签
-    
-    
-      
-      
-      <a href="/tags/Vue2-0/">Vue2.0</a>
-    
-    </span>
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-    
-      
-      
-      <div class="post-title-item">
-  
-  <a href="/2017/05/17/hello-world/">
-  
-    Hello World
-  
-  </a>
-  <p class="page-title-sub">
-    <span id = "post-title-date">5-17</span>
-    
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-    
-  </div>
-
+    <h3 id="什么是vue-router？"><a href="#什么是vue-router？" class="headerlink" title="什么是vue-router？"></a>什么是vue-router？</h3><p>路由，其实就是指向、映射的意思。</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>　路由中有三个基本的概念 route, routes, router。</p>
+<ol>
+<li><strong>route</strong> 是一条路由Home按钮  =&gt; home内容<br><br></li>
+<li><strong>routes</strong> 是一组路由，把上面的每一条路由组合起来，形成一个数组。</li>
+<li><strong>router</strong> 是一个机制，相当于管理者，它来管理路由。当用户点击Home 按钮的时候，这时router 就起作用了，它到routes 中去查找，去找到对应的 Home 内容，所以页面中就显示Home 内容。</li>
+<li><strong>客户端中的路由</strong> 是dom元素的显示和隐藏。客户端路由有两种实现方式:基于hash 和基于html5 history api.</li>
+</ol>
+<h3 id="vue-router安装"><a href="#vue-router安装" class="headerlink" title="vue-router安装"></a>vue-router安装</h3><p>npm  install  vue-router </p>
+<h3 id="vue-router使用"><a href="#vue-router使用" class="headerlink" title="vue-router使用"></a>vue-router使用</h3><p>需要处理:</p>
+<pre><code>1. 处理页面点击的部分;
+2. 点击之后需要到达的路径。
+</code></pre><h4 id="1-页面实现-html模板"><a href="#1-页面实现-html模板" class="headerlink" title="1.页面实现(html模板)"></a>1.页面实现(html模板)</h4><p><code>&lt;router-link to=&quot;/home&quot;&gt;Home&lt;/router-link&gt;</code><br><br><code>&lt;router-view&gt;&lt;/router-view&gt;</code></p>
+<h4 id="2-配置路由-JS"><a href="#2-配置路由-JS" class="headerlink" title="2. 配置路由(JS)"></a>2. 配置路由(JS)</h4><ol>
+<li>定义一条路由,该路由对象由两个部分组成：<br>path和component，<br>如<code>{path:&#39;/home&#39;,component:home;}</code></li>
+<li>定义routers组<br><code>const routes = {
+ {path: &#39;/home&#39;,component:Home},
+ {path:&#39;/about&#39;,component:About }
+}</code></li>
+<li>创建router对路由的管理,由 new vueRouter()创建，接受routers 参数。<br><code>const router = new VueRouter({routers)}</code></li>
+<li>将实例化的router，放入vue的根实例中<br><code>const app = new Vue({
+ router
+}).$mount(&#39;#app&#39;)</code><br>完成后就可以使用路由功能了。</li>
+</ol>
+<p>了解更多: <a href="http://www.cnblogs.com/SamWeb/p/6610733.html" target="_blank" rel="external">SamWeb</a></p>
 
   </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
+  <div class="random-toc">
+    <h2>目录</h2>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是vue-router？"><span class="toc-text">什么是vue-router？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-router安装"><span class="toc-text">vue-router安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-router使用"><span class="toc-text">vue-router使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-页面实现-html模板"><span class="toc-text">1.页面实现(html模板)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-配置路由-JS"><span class="toc-text">2. 配置路由(JS)</span></a></li></ol></li></ol>
+  </div>
+</div>
+
+  
+<nav id="pagination">
+  
+
+  
+
+  
+    <a href="/2017/05/17/hello-world/" class="next">下一篇 Hello World &rarr;</a>
+  
+</nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
 
       
       
@@ -300,6 +282,8 @@ var unsplashConfig = {"gravity":"north"};
 var turnoffBackgroundImage = false;
 
 
+
+  turnoffBackgroundImage = true;
 
 
 var backgroundColor = "34495E";
