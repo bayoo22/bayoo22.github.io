@@ -111,20 +111,20 @@ router 是一个机制，相当于管理者，它来管理路由。当用户点�
     
       <h1 class="">Vue-router的安装与使用</h1>
       
-      <h2 id="什么是vue-router？"><a href="#什么是vue-router？" class="headerlink" title="什么是vue-router？"></a>什么是vue-router？</h2><p>路由，其实就是指向、映射的意思。</p>
-<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>　路由中有三个基本的概念 route, routes, router。</p>
+      <h3 id="什么是vue-router？"><a href="#什么是vue-router？" class="headerlink" title="什么是vue-router？"></a>什么是vue-router？</h3><p>路由，其实就是指向、映射的意思。</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>　路由中有三个基本的概念 route, routes, router。</p>
 <ol>
 <li><strong>route</strong> 是一条路由Home按钮  =&gt; home内容<br><br></li>
 <li><strong>routes</strong> 是一组路由，把上面的每一条路由组合起来，形成一个数组。</li>
 <li><strong>router</strong> 是一个机制，相当于管理者，它来管理路由。当用户点击Home 按钮的时候，这时router 就起作用了，它到routes 中去查找，去找到对应的 Home 内容，所以页面中就显示Home 内容。</li>
 <li><strong>客户端中的路由</strong> 是dom元素的显示和隐藏。客户端路由有两种实现方式:基于hash 和基于html5 history api.</li>
 </ol>
-<h2 id="vue-router安装"><a href="#vue-router安装" class="headerlink" title="vue-router安装"></a>vue-router安装</h2><p>npm  install  vue-router </p>
-<h2 id="vue-router使用"><a href="#vue-router使用" class="headerlink" title="vue-router使用"></a>vue-router使用</h2><p>需要处理:</p>
+<h3 id="vue-router安装"><a href="#vue-router安装" class="headerlink" title="vue-router安装"></a>vue-router安装</h3><p>npm  install  vue-router </p>
+<h3 id="vue-router使用"><a href="#vue-router使用" class="headerlink" title="vue-router使用"></a>vue-router使用</h3><p>需要处理:</p>
 <pre><code>1. 处理页面点击的部分;
 2. 点击之后需要到达的路径。
-</code></pre><h3 id="1-页面实现-html模板"><a href="#1-页面实现-html模板" class="headerlink" title="1.页面实现(html模板)"></a>1.页面实现(html模板)</h3><p><code>&lt;router-link to=&quot;/home&quot;&gt;Home&lt;/router-link&gt;</code><br><br><code>&lt;router-view&gt;&lt;/router-view&gt;</code></p>
-<h3 id="2-配置路由-JS"><a href="#2-配置路由-JS" class="headerlink" title="2. 配置路由(JS)"></a>2. 配置路由(JS)</h3><ol>
+</code></pre><h4 id="1-页面实现-html模板"><a href="#1-页面实现-html模板" class="headerlink" title="1.页面实现(html模板)"></a>1.页面实现(html模板)</h4><p><code>&lt;router-link to=&quot;/home&quot;&gt;Home&lt;/router-link&gt;</code><br><br><code>&lt;router-view&gt;&lt;/router-view&gt;</code></p>
+<h4 id="2-配置路由-JS"><a href="#2-配置路由-JS" class="headerlink" title="2. 配置路由(JS)"></a>2. 配置路由(JS)</h4><ol>
 <li>定义一条路由,该路由对象由两个部分组成：<br>path和component，<br>如<code>{path:&#39;/home&#39;,component:home;}</code></li>
 <li>定义routers组<br><code>const routes = {
  {path: &#39;/home&#39;,component:Home},
