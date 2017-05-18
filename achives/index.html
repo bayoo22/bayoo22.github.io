@@ -21,9 +21,10 @@
   
   
   
-    <meta name="description" content="Learn more,happy more!">
+    <meta name="description" content="什么是vue-router？1路由，其实就是指向、映射的意思。
+基本概念　路由中有三个基本的概念 route, routes, router。123451. **route** 是一条路由Home按钮  =&gt; home内容&lt;br /&gt;2. **routes** 是一组路由，把上面的每一条路由组合起来，形成一个数组。3. **router** 是一个机制，相当于管理者，它来管...">
   
-  <title>achives [ MJY-Blog ]</title>
+  <title>Vue-router的安装与使用 [ MJY-Blog ]</title>
   
   
     <link rel="shortcut icon" href="/images/avatar.ico">
@@ -109,9 +110,16 @@
   <article id="page">
     
     
-      <h1 class="">achives</h1>
+      <h1 class="">Vue-router的安装与使用</h1>
       
-      
+      <h2 id="什么是vue-router？"><a href="#什么是vue-router？" class="headerlink" title="什么是vue-router？"></a>什么是vue-router？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">路由，其实就是指向、映射的意思。</div></pre></td></tr></table></figure>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>　路由中有三个基本的概念 route, routes, router。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. **route** 是一条路由Home按钮  =&gt; home内容</div><div class="line">&lt;br /&gt;</div><div class="line">2. **routes** 是一组路由，把上面的每一条路由组合起来，形成一个数组。</div><div class="line">3. **router** 是一个机制，相当于管理者，它来管理路由。当用户点击Home 按钮的时候，这时router 就起作用了，它到routes 中去查找，去找到对应的 Home 内容，所以页面中就显示Home 内容。</div><div class="line">4. **客户端中的路由** 是dom元素的显示和隐藏。客户端路由有两种实现方式:基于hash 和基于html5 history api.</div></pre></td></tr></table></figure></p>
+<h2 id="vue-router安装"><a href="#vue-router安装" class="headerlink" title="vue-router安装"></a>vue-router安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm  install  vue-router</div></pre></td></tr></table></figure>
+<h2 id="vue-router使用"><a href="#vue-router使用" class="headerlink" title="vue-router使用"></a>vue-router使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">需要处理:</div><div class="line">    1. 处理页面点击的部分;</div><div class="line">    2. 点击之后需要到达的路径。</div></pre></td></tr></table></figure>
+<h3 id="1-页面实现-html模板"><a href="#1-页面实现-html模板" class="headerlink" title="1.页面实现(html模板)"></a>1.页面实现(html模板)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">`&lt;router-link to=&quot;/home&quot;&gt;Home&lt;/router-link&gt;`&lt;br /&gt;</div><div class="line">`&lt;router-view&gt;&lt;/router-view&gt;`</div></pre></td></tr></table></figure>
+<h3 id="2-配置路由-JS"><a href="#2-配置路由-JS" class="headerlink" title="2. 配置路由(JS)"></a>2. 配置路由(JS)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">1. 定义一条路由,该路由对象由两个部分组成：</div><div class="line">path和component，</div><div class="line">如`&#123;path:&apos;/home&apos;,component:home;&#125;`</div><div class="line">2. 定义routers组</div><div class="line">`const routes = &#123;</div><div class="line">    &#123;path: &apos;/home&apos;,component:Home&#125;,</div><div class="line">    &#123;path:&apos;/about&apos;,component:About &#125;</div><div class="line">&#125;`</div><div class="line">3. 创建router对路由的管理,由 new vueRouter()创建，接受routers 参数。</div><div class="line">`const router = new VueRouter(&#123;routers)&#125;`</div><div class="line">4. 将实例化的router，放入vue的根实例中</div><div class="line">`const app = new Vue(&#123;</div><div class="line">    router</div><div class="line">&#125;).$mount(&apos;#app&apos;)`</div><div class="line">完成后就可以使用路由功能了。</div></pre></td></tr></table></figure>
+<p>了解更多: <a href="http://www.cnblogs.com/SamWeb/p/6610733.html" target="_blank" rel="external">SamWeb</a></p>
+
     
   </article>
 
