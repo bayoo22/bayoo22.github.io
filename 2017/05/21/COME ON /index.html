@@ -1,7 +1,5 @@
 
 
-  
-
 
 
 
@@ -18,9 +16,20 @@
   
   
   
-    <meta name="description" content="Learn more,happy more!">
+    <meta name="description" content="I Love U
+	
+		#wrapper{
+			display: flex;
+			flex-wrap: nowrap;
+			-webkit-animation: fly 1.5s linear 1 forwards;
+		}
+		.i {
+			width: 40px;
+			height: 300px;
+			margin: 100px auto;
+			background-co...">
   
-  <title>归档 [ MJY-Blog ]</title>
+  <title>奋斗不息 [ MJY-Blog ]</title>
   
   
     <link rel="shortcut icon" href="/images/avatar.ico">
@@ -39,6 +48,15 @@
 <body>
 <div class="side-navigate hide-area">
   
+  
+    <div class="item next">
+      <a href="/2017/05/18/vue-router/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        Vue-router的安装与使用
+      </div>
+    </div>
   
 </div>
 <div id="outer-container" class="hide-area">
@@ -103,137 +121,191 @@
     <div id="content-inner">
       
       
-  <article>
+  <article id="post">
+    <h1>空标题</h1>
+    <p class="page-title-sub">
+      <span id = "post-title-date">撰写于 2017-05-21</span>
+      
+        <span id = "post-title-updated">修改于 2017-05-21</span>
+      
+      
+      
+    </p>
     
-
-  <div id="recent-posts">
-    <h1>归档
-    
-      <span class="posts-count">
-      共
-      3
-      
-        文章
-      
-      </span>
-    
-    </h1>
-    
-    
-      
-      
-        
-      
-      
-    
-      
-      
-      
-    
-      
-      
-      
-    
-    
-    
-      
-      
-        
-        <h3 class="archive-year-title">2017
-        
-          <span class="posts-count">
-          共
-          3
-          
-            文章
-          
-          </span>
-        
-        </h3>
-      
-      <div class="post-title-item">
-  
-  <a href="/2017/05/21/COME ON /">
-  
-    I Love U
-	
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>I Love U</title>
+	<style>
 		#wrapper{
 			display: flex;
 			flex-wrap: nowrap;
-			-webkit-ani...
-  
-  </a>
-  <p class="page-title-sub">
-    <span id = "post-title-date">5-21</span>
-    
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-    
-      
-      
-      <div class="post-title-item">
-  
-  <a href="/2017/05/18/vue-router/">
-  
-    Vue-router的安装与使用
-  
-  </a>
-  <p class="page-title-sub">
-    <span id = "post-title-date">5-18</span>
-    
-    
-    <span id = "post-title-tags">
-    标签
-    
-    
-      
-      
-      <a href="/tags/Vue2-0/">Vue2.0</a>
-    
-    </span>
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-    
-      
-      
-      <div class="post-title-item">
-  
-  <a href="/2017/05/17/hello-world/">
-  
-    Hello World
-  
-  </a>
-  <p class="page-title-sub">
-    <span id = "post-title-date">5-17</span>
-    
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
+			-webkit-animation: fly 1.5s linear 1 forwards;
+		}
+		.i {
+			width: 40px;
+			height: 300px;
+			margin: 100px auto;
+			background-color: yellow;
+			border-radius: 5px;
+			background-image: linear-gradient(
+				135deg,
+                green 25%,
+                transparent 25%,
+                transparent 50%,
+                green 50%,
+                green 75%,
+                transparent 75%,
+                transparent 100%
+			);
+			background-size: 40px 40px;
+
+			background-position: 0 0;
+
+			/*animation: move 0.5s infinite linear;*/
+		}
+
+		@keyframes move {
+			0% {
+				background-position: 0 0
+			}
+
+			100% {
+				background-position: 40px 0;
+			}
+		}
+		.love {
+			width: 200px;
+			height: 200px;
+			margin: 100px auto;
+			position: relative;
+		}
+
+		.left {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			position: absolute;
+			left: -70px;
+		}
+
+		.right {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			position: absolute;
+			right: -94px;
+		}
+
+		.bottom {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			position: absolute;
+			bottom: -80px;
+			left: 12px;
+		}
+
+		.left, .right {
+			border-radius: 100px;
+		}
+
+		.left, .right, .bottom {
+			animation: move 1s infinite;
+		}
+
+		@keyframes move {
+			0% {
+				transform: scale(1) rotate(45deg);
+			}
+
+			50% {
+				transform: scale(1.2) rotate(45deg);
+			}
+
+			100% {
+				transform: scale(1) rotate(45deg);
+			}
+		}
+		/*拱形*/
+		.you {
+			width: 200px;
+			height: 300px;
+			border-radius: 0 0 90px 90px;
+			margin: 100px auto;
+			background: #2989d8; /* Old browsers */
+            background: -moz-linear-gradient(45deg, #2989d8 33%, #7db9e8 34%, #7db9e8 59%, #2989d8 60%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left bottom, right top, color-stop(33%,#2989d8), color-stop(34%,#7db9e8), color-stop(59%,#7db9e8), color-stop(60%,#2989d8)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(45deg, #2989d8 33%,#7db9e8 34%,#7db9e8 59%,#2989d8 60%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(45deg, #2989d8 33%,#7db9e8 34%,#7db9e8 59%,#2989d8 60%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(45deg, #2989d8 33%,#7db9e8 34%,#7db9e8 59%,#2989d8 60%); /* IE10+ */
+            background: linear-gradient(45deg, #2989d8 33%,#7db9e8 34%,#7db9e8 59%,#2989d8 60%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2989d8', endColorstr='#2989d8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+			position: relative;
+		}
+		.u {
+			position: absolute;
+			top:0;
+			left: 40px;
+			z-index: 10;
+			width: 120px;
+			height: 260px;
+			border-radius: 0 0 90px 90px;
+			background: #fff;
+		}
+		@keyframes fly{
+            from{
+                margin-left: auto;
+                margin-top: 200px;
+                opacity: 0.5;
+            }
+            to{
+                margin: 60px auto;
+            }
+        }
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="i"></div>
+		<div class="love">
+			<span class="left"></span>
+			<span class="right"></span>
+			<span class="bottom"></span>
+		</div>
+		<div class="you">
+			<div class="u">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+  </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
+  <div class="random-toc">
+    <h2>目录</h2>
     
   </div>
+</div>
 
+  
+<nav id="pagination">
+  
 
-  </article>
+  
+
+  
+    <a href="/2017/05/18/vue-router/" class="next">下一篇 Vue-router的安装与使用 &rarr;</a>
+  
+</nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
 
       
       
@@ -329,6 +401,8 @@ var unsplashConfig = {"gravity":"north"};
 var turnoffBackgroundImage = false;
 
 
+
+  turnoffBackgroundImage = true;
 
 
 var backgroundColor = "34495E";
